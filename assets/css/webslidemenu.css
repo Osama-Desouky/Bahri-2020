@@ -55,7 +55,6 @@ video {
 /* ================== Desktop Main Menu CSS ================== */
 .wsmenucontainer {
   background-size: cover;
-  background-image: url(../images/bg01.jpg);
   overflow: hidden;
   background-attachment: fixed;
   background-position: 50% 0;

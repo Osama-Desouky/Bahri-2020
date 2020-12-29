@@ -244,7 +244,7 @@ $(document).ready(function () {
     });
 
     $(function(){
-        $('body').mouseup(function(e){
+        $('document').on("click", function(e){
             var container = $(".menu-hide");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 $('.panel-tab .btn-secondary').removeClass('hide-btn');
@@ -276,36 +276,8 @@ $(document).ready(function () {
         });
     });
 
-    $(function() {
-        App.init();
-    });
-
     // $('.toast').toast('show');
 });
-
-var App = {
-    init: function () {
-        this.search.bar()
-    },
-    search: {
-        bar: function () {
-            $(".header .ion-ios-search").on("touchstart click", function () {
-                var e = ($(".search input").hasClass("search-visible"), $(".search input").val());
-                return "" != e && null != e ? (App.search.html($(".search input").val()), !1) : $(".search input").focus(), void $(".search input").toggleClass("search-visible")
-            }), $(".search form").on("submit", function (e) {
-                e.preventDefault(), App.search.html($(".search input").val())
-            })
-        },
-        html: function (e) {
-            $(".search input").removeClass("search-visible"),
-                $(".html").removeClass("visible"),
-                $(".html.search").addClass("visible"),
-                $(".html.search").html($(".html.search").html()),
-                $(".html.search .key").html(e),
-                $(".header .search input").val("")
-        }
-    }
-}
 
 var myModalEl = document.getElementById('empModal')
 var modal = bootstrap.Modal.getInstance(myModalEl)
