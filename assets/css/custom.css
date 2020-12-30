@@ -9724,12 +9724,13 @@ small, .small {
       transition: none; } }
   .employee-carousel ul li.list-inline-item .clip, .employee-carousel ul li.list-inline-item .heart, .employee-carousel ul li.list-inline-item .mail, .employee-carousel ul li.list-inline-item .teams, .employee-carousel ul li.list-inline-item .dots {
     width: 25px;
-    height: 25px;
+    height: 29px;
     fill: #ff681d;
     transition: all 0.3s ease-in-out;
     pointer-events: all;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
+    text-align: center;
+    margin: auto;
     background-image: url("../images/clip.svg");
     background-repeat: no-repeat;
     background-position: center; }
