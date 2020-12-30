@@ -294,9 +294,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     if ($('.toast').length) {
-        if
         $('.toast').toast('show');
-
     }
 });
 
