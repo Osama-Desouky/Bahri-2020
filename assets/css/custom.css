@@ -9467,21 +9467,33 @@ section {
     @media (prefers-reduced-motion: reduce) {
       .employee-updates .emp-desc ul li.list-inline-item {
         transition: none; } }
-    .employee-updates .emp-desc ul li.list-inline-item svg.heart {
-      width: 17px;
-      height: 14px;
+    .employee-updates .emp-desc ul li.list-inline-item .clip, .employee-updates .emp-desc ul li.list-inline-item .heart, .employee-updates .emp-desc ul li.list-inline-item .mail, .employee-updates .emp-desc ul li.list-inline-item .teams, .employee-updates .emp-desc ul li.list-inline-item .dots {
+      width: 25px;
+      height: 25px;
       fill: #ff681d;
       transition: all 0.3s ease-in-out;
       pointer-events: all;
-      border-radius: 50%; }
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url("../images/clip.svg");
+      background-repeat: no-repeat;
+      background-position: center; }
       @media (prefers-reduced-motion: reduce) {
-        .employee-updates .emp-desc ul li.list-inline-item svg.heart {
+        .employee-updates .emp-desc ul li.list-inline-item .clip, .employee-updates .emp-desc ul li.list-inline-item .heart, .employee-updates .emp-desc ul li.list-inline-item .mail, .employee-updates .emp-desc ul li.list-inline-item .teams, .employee-updates .emp-desc ul li.list-inline-item .dots {
           transition: none; } }
-      .employee-updates .emp-desc ul li.list-inline-item svg.heart:hover {
+      .employee-updates .emp-desc ul li.list-inline-item .clip:hover, .employee-updates .emp-desc ul li.list-inline-item .heart:hover, .employee-updates .emp-desc ul li.list-inline-item .mail:hover, .employee-updates .emp-desc ul li.list-inline-item .teams:hover, .employee-updates .emp-desc ul li.list-inline-item .dots:hover {
         transition: all 0.3s ease-in-out; }
         @media (prefers-reduced-motion: reduce) {
-          .employee-updates .emp-desc ul li.list-inline-item svg.heart:hover {
+          .employee-updates .emp-desc ul li.list-inline-item .clip:hover, .employee-updates .emp-desc ul li.list-inline-item .heart:hover, .employee-updates .emp-desc ul li.list-inline-item .mail:hover, .employee-updates .emp-desc ul li.list-inline-item .teams:hover, .employee-updates .emp-desc ul li.list-inline-item .dots:hover {
             transition: none; } }
+    .employee-updates .emp-desc ul li.list-inline-item .heart {
+      background-image: url("../images/heart.svg"); }
+    .employee-updates .emp-desc ul li.list-inline-item .mail {
+      background-image: url("../images/mail.svg"); }
+    .employee-updates .emp-desc ul li.list-inline-item .teams {
+      background-image: url("../images/teams.svg"); }
+    .employee-updates .emp-desc ul li.list-inline-item .dots {
+      background-image: url("../images/dots.svg"); }
     .employee-updates .emp-desc ul li.list-inline-item.active {
       background-repeat: no-repeat;
       background-color: #EBEBEB;
@@ -9702,9 +9714,61 @@ small, .small {
   height: 65px;
   border-radius: 50%; }
 .employee-carousel ul li.list-inline-item {
-  margin: 0 20px 5px 0; }
+  margin: 0 20px 5px 0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .employee-carousel ul li.list-inline-item {
+      transition: none; } }
+  .employee-carousel ul li.list-inline-item .clip, .employee-carousel ul li.list-inline-item .heart, .employee-carousel ul li.list-inline-item .mail, .employee-carousel ul li.list-inline-item .teams, .employee-carousel ul li.list-inline-item .dots {
+    width: 25px;
+    height: 25px;
+    fill: #ff681d;
+    transition: all 0.3s ease-in-out;
+    pointer-events: all;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../images/clip.svg");
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media (prefers-reduced-motion: reduce) {
+      .employee-carousel ul li.list-inline-item .clip, .employee-carousel ul li.list-inline-item .heart, .employee-carousel ul li.list-inline-item .mail, .employee-carousel ul li.list-inline-item .teams, .employee-carousel ul li.list-inline-item .dots {
+        transition: none; } }
+    .employee-carousel ul li.list-inline-item .clip:hover, .employee-carousel ul li.list-inline-item .heart:hover, .employee-carousel ul li.list-inline-item .mail:hover, .employee-carousel ul li.list-inline-item .teams:hover, .employee-carousel ul li.list-inline-item .dots:hover {
+      transition: all 0.3s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .employee-carousel ul li.list-inline-item .clip:hover, .employee-carousel ul li.list-inline-item .heart:hover, .employee-carousel ul li.list-inline-item .mail:hover, .employee-carousel ul li.list-inline-item .teams:hover, .employee-carousel ul li.list-inline-item .dots:hover {
+          transition: none; } }
+  .employee-carousel ul li.list-inline-item .heart {
+    background-image: url("../images/heart.svg"); }
+  .employee-carousel ul li.list-inline-item .mail {
+    background-image: url("../images/mail.svg"); }
+  .employee-carousel ul li.list-inline-item .teams {
+    background-image: url("../images/teams.svg"); }
+  .employee-carousel ul li.list-inline-item .dots {
+    background-image: url("../images/dots.svg"); }
+  .employee-carousel ul li.list-inline-item.active {
+    background-repeat: no-repeat;
+    background-color: #EBEBEB;
+    border-radius: 50%; }
+  .employee-carousel ul li.list-inline-item.active .heart {
+    background-image: url("../images/heart-fill.svg"); }
+  .employee-carousel ul li.list-inline-item.active .clip {
+    background-image: url("../images/clip-fill.svg");
+    background-repeat: no-repeat; }
+  .employee-carousel ul li.list-inline-item.active .mail {
+    background-image: url("../images/mail-fill.svg");
+    background-repeat: no-repeat; }
+  .employee-carousel ul li.list-inline-item.active .teams {
+    background-image: url("../images/teams-fill.svg");
+    background-repeat: no-repeat; }
   .employee-carousel ul li.list-inline-item:last-child {
     margin-right: 0; }
+  .employee-carousel ul li.list-inline-item:hover {
+    background: #EBEBEB;
+    border-radius: 50%; }
 
 .events-carousel .emp .emp-desc {
   margin-left: 32px;
@@ -10052,6 +10116,7 @@ nav.wsmenu.clearfix {
   position: relative; }
   .search-box .search {
     background: #ff681d;
+    line-height: 0;
     width: 32px;
     height: 32px;
     text-align: center;
