@@ -10164,15 +10164,55 @@ nav.wsmenu.clearfix {
 .card-img-overlay {
   top: auto; }
 
+.edit-modal {
+  z-index: 9999; }
+
+.panel ul li i {
+  transition: all 100ms ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .panel ul li i {
+      transition: none; } }
+  .panel ul li i:hover {
+    cursor: pointer; }
+
+.panel ul li i.remove-icon:after {
+  content: '';
+  opacity: 1;
+  transition: all 100ms ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.16);
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: moveInBottom 100ms ease-out .75s;
+  animation-fill-mode: backwards; }
+  @media (prefers-reduced-motion: reduce) {
+    .panel ul li i.remove-icon:after {
+      transition: none; } }
+
 .panel {
   background: #ffffff;
   height: 100vh;
   padding: 30px; }
-  .panel ul {
+  .panel ul, .panel .edit-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; }
+  .panel .edit-section {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    .panel .edit-section .edit-me {
+      width: 80px;
+      height: 35px;
+      padding: 0 5px; }
   .panel h6, .panel .h6 {
     font-family: bold;
     font-size: 1.4rem;
@@ -10183,32 +10223,33 @@ nav.wsmenu.clearfix {
     right: 22px; }
     .panel .xclose:after {
       transform: rotate(20deg); }
-  .panel li.list-inline-item {
+  .panel li.list-inline-item, .panel .edit-icon {
     padding: 25px !important;
     margin-right: 0;
-    transition: all 0.3s ease-in-out; }
+    transition: all 0.3s ease-in-out;
+    position: relative; }
     @media (prefers-reduced-motion: reduce) {
-      .panel li.list-inline-item {
+      .panel li.list-inline-item, .panel .edit-icon {
         transition: none; } }
-    .panel li.list-inline-item a {
+    .panel li.list-inline-item a, .panel .edit-icon a {
       width: 65px;
       height: 65px;
       background: #efefef;
       border-radius: 16px;
       transform: rotate(50deg);
       display: flex; }
-      .panel li.list-inline-item a svg {
+      .panel li.list-inline-item a svg, .panel .edit-icon a svg {
         transform: rotate(-50deg) translate(-4px, 5%);
         align-self: center;
         transform-origin: top;
         width: 50px;
         height: 27px; }
-    .panel li.list-inline-item .text-logo {
+    .panel li.list-inline-item .text-logo, .panel .edit-icon .text-logo {
       margin-top: 25px;
       color: #003c71;
       font-size: 1rem;
       font-family: SemiBold; }
-    .panel li.list-inline-item:hover {
+    .panel li.list-inline-item:hover, .panel .edit-icon:hover {
       background: #ffffff;
       box-shadow: -10px 0 45px rgba(0, 0, 0, 0.15); }
 
@@ -10507,16 +10548,49 @@ thead, tbody, tfoot, tr, td, th {
       font-size: 10px;
       font-family: Regular; }
 
-.modal {
+.modal .edit-modal {
   z-index: 9999 !important; }
-  .modal .modal-header {
-    padding: 25px 0 15px 30px; }
-    .modal .modal-header .btn-close {
-      margin-right: 25px; }
-    .modal .modal-header .modal-title {
-      color: #555555;
-      font-family: SemiBold;
-      font-size: 20px; }
+  .modal .edit-modal .modal-content {
+    padding: 36px; }
+    .modal .edit-modal .modal-content .modal-header {
+      padding: 0;
+      margin-bottom: 45px; }
+      .modal .edit-modal .modal-content .modal-header .btn-close {
+        margin-right: 0; }
+      .modal .edit-modal .modal-content .modal-header .modal-title {
+        color: #003c71;
+        font-family: Bold;
+        font-size: 24px; }
+    .modal .edit-modal .modal-content .modal-body {
+      padding: 0; }
+      .modal .edit-modal .modal-content .modal-body label {
+        font-size: 16px;
+        font-family: 'Medium';
+        color: #003c71;
+        margin-bottom: 20px; }
+      .modal .edit-modal .modal-content .modal-body input {
+        border: 1px solid #D8D8DF;
+        color: #666666;
+        margin-bottom: 20px; }
+      .modal .edit-modal .modal-content .modal-body button.add, .modal .edit-modal .modal-content .modal-body button.cancel {
+        border-radius: 25px;
+        text-transform: uppercase;
+        width: 120px;
+        height: 51px; }
+      .modal .edit-modal .modal-content .modal-body button.add {
+        color: #003c71;
+        margin-right: 15px; }
+        .modal .edit-modal .modal-content .modal-body button.add:hover, .modal .edit-modal .modal-content .modal-body button.add:focus {
+          background: #ff681d;
+          color: #ffffff; }
+      .modal .edit-modal .modal-content .modal-body button.cancel {
+        background: #A8A8AA;
+        color: #ffffff; }
+        .modal .edit-modal .modal-content .modal-body button.cancel:hover, .modal .edit-modal .modal-content .modal-body button.cancel:focus {
+          background: #BABABC; }
+
+.modal-backdrop {
+  z-index: 9; }
 
 .wsmenu-list li a.active:after {
   display: block;
