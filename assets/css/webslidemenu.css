@@ -270,7 +270,15 @@ video {
 .wsmenu>.wsmenu-list>li.rightmenu {
   zoom: 1;
 }
-
+.wsmenu > .wsmenu-list > li > ul.sub-menu:before {
+  content: '';
+  height: 3px;
+  width: 75%;
+  background: #ff681d;
+  position: absolute;
+  display: block;
+  z-index: 9;
+}
 /* ================== Desktop Drop Down Menu CSS ================== */
 .wsmenu>.wsmenu-list>li>ul.sub-menu {
   position: absolute;
@@ -279,7 +287,6 @@ video {
   min-width: 250px;
   padding-left: 0;
   margin-top: -1px;
-  border-top: 3px solid #ff681d;
 }
 
 .wsmenu>.wsmenu-list>li>ul.sub-menu>li {

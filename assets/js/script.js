@@ -235,6 +235,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    //Upcoming Events
 var events = new Swiper('.events', {
     direction: 'vertical',
     // slidesPerView: 3,
@@ -246,9 +247,11 @@ var events = new Swiper('.events', {
     grabCursor: true,
     slidesPerView: 3,
     loop:true,
-    spaceBetween: 0,
+    spaceBetween: 10,
     centerMode: false,
     centeredSlidesBounds: false,
+    slidesPerGroup: 3,
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -261,14 +264,16 @@ var events = new Swiper('.events', {
         setWrapperSize: true,
         roundLengths: true,
         // autoHeight: false,
-        freeMode: false,
+        freeMode: true,
         autoHeight: false,
         grabCursor: true,
         slidesPerView: 1,
-        loop:true,
-        spaceBetween: 5,
-        centerMode: false,
-        centeredSlidesBounds: false,
+        loop:false,
+        spaceBetween: 30,
+        centerMode: true,
+        centeredSlidesBounds: true,
+        slidesPerGroup: 1,
+
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -286,27 +291,30 @@ var events = new Swiper('.events', {
         grabCursor: true,
         slidesPerView: 3,
         loop:true,
-        spaceBetween: 5,
+        spaceBetween: 10,
         centerMode: false,
         centeredSlidesBounds: false,
+        slidesPerGroup: 3,
+
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         }
     });
 
+    //Employee Updates
     var employee = new Swiper('.employee', {
         direction: 'vertical',
         // slidesPerView: 3,
         setWrapperSize: true,
         roundLengths: true,
-        // autoHeight: false,
-        freeMode: false,
         autoHeight: false,
+        freeMode: true,
         grabCursor: true,
         slidesPerView: 3,
-        loop:true,
+        loop:false,
         spaceBetween: 10,
+        slidesPerGroup: 3,
         centerMode: true,
         centeredSlidesBounds: false,
         pagination: {
@@ -327,6 +335,7 @@ var events = new Swiper('.events', {
         slidesPerView: 3,
         loop:true,
         spaceBetween: 15,
+        slidesPerGroup: 3,
         centerMode: true,
         centeredSlidesBounds: true,
         pagination: {
@@ -344,9 +353,10 @@ var events = new Swiper('.events', {
         freeMode: false,
         autoHeight: false,
         grabCursor: true,
-        slidesPerView: 3,
-        loop:true,
-        spaceBetween: 15,
+        slidesPerView: 1,
+        loop:false,
+        spaceBetween: 5,
+        slidesPerGroup: 1,
         centerMode: true,
         centeredSlidesBounds: true,
         pagination: {
@@ -439,9 +449,9 @@ $(document).ready(function () {
     });
 });
 
-// $(function () {
-//     $('.card').matchHeight();
-// });
+$(function () {
+    $('.card').matchHeight();
+});
 
 
 
