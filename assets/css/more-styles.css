@@ -51,6 +51,9 @@
 
 
 /* close btn */
+.business-units {
+    overflow: hidden;
+}
 .business-units .business-units-details-container .content .btn-close:hover{
     box-shadow: none ;
     transition: box-shadow 1s linear;
@@ -124,8 +127,32 @@
     margin-bottom: 70px;
 }
 .vision-top-sec{
-    background-image: url(../images/vision-bg2.png);
+    /* background-image: url(../images/vision-bg2.png); */
     height: 628px;
+    position: relative;
+    background: 0;
+}
+.top-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.top-image img{
+    z-index: 2;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-overlay{
+    z-index: 5;
+    background-color: #00000030;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .sharepoint-btns{
     /* float: right; */
@@ -137,9 +164,12 @@ height: 500px;
 .vision-top-sec .inner-header-content .top-sec-head h1{
     margin-bottom: 85px;
     font-family: 'Bold';
+    z-index: 10;
+    text-align: center;
     }
     .vision-top-sec .inner-header-content .top-sec-head button{
         padding: 9px 43px;
+        z-index: 10;
     }
 .vision-bullets-ul{
 list-style: none;
@@ -205,8 +235,113 @@ border-radius: 50%;
     margin-bottom: 45px;
 }
 
+/* job announcement page */
+.about-jobs{
+    padding: 52px 93px 7px;
+}
+.about-jobs p{
+    /* margin-bottom: 8px; */
+    line-height: 30px;
+    font-size: 16px;
 
-
+}
+.about-jobs p.uniqe-p{
+    position: relative;
+    padding-top: 15px;
+}
+.about-jobs p.uniqe-p::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 39%;
+    border: 1px solid #dadada;
+}
+.about-jobs a{
+    color: #FF681D;
+    font-family: 'Medium';
+}
+ul.contact-me{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 0;
+}
+.job-content{
+    margin-top: 45px;
+    margin-bottom: 70px;
+    padding: 0;
+}
+.job-item {
+    /* padding: 31px 40px 38px; */
+    border-bottom: 1px solid #EFEFEF;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    transition: 500ms;
+}
+.job-item:hover{
+    background-color: #F9F9F9
+}
+.job-item h2{
+    font-size: 24px;
+    font-family: 'Medium';
+    color: #003C71;
+    margin-bottom: 20px;
+    margin-left: 41px;
+}
+.job-item p{
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 41px;
+}
+.job-item span{
+    color: #FF681D;
+    font-size: 14px;
+    position: relative;
+    padding-left: 27px;
+    margin-left: 41px;
+}
+.job-item span::after{
+    content:"";
+    width: 16px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/location-24.svg);
+    background-repeat: no-repeat;
+}
+/*  */
+/* meeeeeeeedia */
+@media(max-width:1199px){
+    ul.contact-me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-me li{
+       margin-top: 10px;
+    }
+    .business-units .business-units-details-container .content {
+        padding: 60px 60px;
+    }
+    .business-units .business-units-details-container .content .top10 h1, .business-units .business-units-details-container .content .top10 .h1 {
+        font-size: 55px;
+    }
+    .business-units .business-units-details-container .content .bottom-dec .six{
+        font-size: 55px;
+    }
+    section.about .about-intro {
+        margin-top: 70px;
+    }
+    section.about .about-intro p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
 @media(max-width:991px){
     .business-units .business-units-container{
         height: 135px;
@@ -234,26 +369,33 @@ border-radius: 50%;
         margin: 12px 10px;
     }
     .business-units .business-units-details-container .content{
-        padding: 30px 15px;
-    }
-    .business-units .business-units-details-container .content p{
+        padding: 90px 170px
+     }
+    /*.business-units .business-units-details-container .content p{
         font-size: 14px;
         font-family: Regular;
         line-height: 24px;
+        margin-bottom: 5px;
     }
+    .business-units .business-units-details-container .content .small-p {
+        font-size: 12px;
+    } */
     .business-units .business-units-details-container .content .btn-secondary{
-        padding: 8px 15px;
-    width: 100%;
+        padding: 5px 15px;
+        font-size: 12px;
+        width: 100%;
     }
     .business-units .business-units-details-container .content .top10{
-        margin-bottom: 15px;
+        /* min-height: 100px; */
+        /* margin-bottom: 10px; */
         margin-top: 25px;
-        float: left;
+        /* margin-right: 10px; */
+        /* float: left; */
     }
     .business-units .business-units-details-container .content .bottom-dec .six {
         font-size: 30px;
         font-family: Bold;
-        margin-left: 10px;
+        margin-left: 20px;
     }
     .business-units .business-units-details-container .content .top10 h1,
     .business-units .business-units-details-container .content .top10 .h1 {
@@ -270,9 +412,78 @@ border-radius: 50%;
         top: 25px;
         right: 25px;
     }
+    .vision-bullets-ul li h3 {
+        font-size: 20px;
+    }
+    .vision-bullets-ul li p {
+        font-size: 13px;
+        line-height: 24px;
+        color: #666666;
+    }
+    .vision-bullets-ul li {
+        padding-bottom: 25px;
+        padding-left: 5px;
+    }
+    .p-75 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .vision-content .vision-download-btn{
+        font-size: 12px;
+        padding: 6px 18px;
+    }
+   
+
+    .about-jobs {
+        padding: 52px 20px 7px;
+    }
+    .job-item h2,
+    .job-item span,
+    .job-item p{
+        margin-left: 15px;
+    }
+    .job-item p{
+        font-size: 13px;
+        margin-top: 5px;
+        line-height: 24px;
+    }
+    .job-item span{
+        font-size: 12px;
+    }
+    .job-item h2{
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+    .job-item{
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+    .job-item button{
+        padding: 6px 18px ;
+        font-size: 12px;
+    }
+    .about-jobs p {
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .business-units .business-units-details-container{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        max-height: 100%;
+    }
+
 }
 
 @media(max-width:767px){
+    .business-units .business-units-details-container .content .top10 {
+        margin-right: 0px;
+        min-width: 155px;
+        /* max-width: 155px; */
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
     section.about .about-intro{
         margin-top: 30px;
     }
@@ -292,10 +503,38 @@ border-radius: 50%;
         padding: 20px;
         padding-top: 0;
     }
+    .job-item p {
+        margin-bottom: 10px;
+    }
+    .vision-top-sec .inner-header-content .top-sec-head {
+        height: auto;
+    } 
+    .vision-top-sec {
+        height: 350px;
+        overflow: hidden;
+    }
+    .vision-top-sec .inner-header-content .top-sec-head h1 {
+        margin-bottom: 30px;
+    }
+    .vision-top-sec .inner-header-content .top-sec-head button {
+        padding: 5px 30px;
+        font-size: 12px;
+    }
+    .vision-bullets-ul {
+        margin-top: 25px;
+    }
+
+    .business-units .business-units-details-container .content {
+        padding: 60px 50px
+    }
+    .business-units .business-units-details-container .content .btn-close{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media(max-width:575px){
-    .business-units .business-units-details-container .content img {
+     .business-units .business-units-details-container .content img {
         margin-bottom: 5px;
         max-width: 55px;
     }
@@ -333,7 +572,10 @@ border-radius: 50%;
     .business-units .business-units-details-container .content .top10 span{
         font-size: 10px;
     }
-    .business-units .business-units-details-container .content {
+    /* .business-units .business-units-details-container .content {
         padding: 30px 5px;
-    }
+    }  */
+    /* .top-image {
+        left: -100%;
+    } */
 }
